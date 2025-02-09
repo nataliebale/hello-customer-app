@@ -1,18 +1,59 @@
-<mat-accordion class="accordion" multi>
-  <mat-expansion-panel class="expansion-panel">
+<mat-accordion multi class="accordion">
+  <mat-expansion-panel
+    (opened)="panelOpenStateForOntwikkel.set(true)"
+    (closed)="panelOpenStateForOntwikkel.set(false)"
+    [hideToggle]="true"
+    [expanded]="panelOpenStateForOntwikkel">
+
     <mat-expansion-panel-header>
-      <mat-panel-title> Personal data </mat-panel-title>
+      <mat-panel-title>
+        <div class="ep__title">
+          <div>
+            <img src="/assets/icons/team.svg" alt="team">
+            Ontwikkel
+          </div>
+          <span class="ep__title__devider">/</span>
+          <div>
+            <img src="/assets/icons/folder.svg" alt="folder">
+            Team A
+          </div>
+        </div>
+      </mat-panel-title>
+      <span class="ep__toggle">
+        {{ panelOpenStateForOntwikkel() ? 'HIDE' : 'SHOW' }} PERMISSIONS & ACCESS
+      </span>
     </mat-expansion-panel-header>
 
-    shdksjdhsfskjfsfjsf
+    <app-permissions-access-form></app-permissions-access-form>
+
   </mat-expansion-panel>
 
-  <mat-expansion-panel>
+  <mat-expansion-panel
+    (opened)="panelOpenStateForClientTeam.set(true)"
+    (closed)="panelOpenStateForClientTeam.set(false)"
+    [hideToggle]="true"
+    [expanded]="panelOpenStateForClientTeam">
+
     <mat-expansion-panel-header>
-      <mat-panel-title> Day of the trip </mat-panel-title>
+      <mat-panel-title>
+        <div class="ep__title">
+          <div>
+            <img src="/assets/icons/team.svg" alt="team">
+            Client team
+          </div>
+          <span class="ep__title__devider">/</span>
+          <div>
+            <img src="/assets/icons/folder.svg" alt="folder">
+            Team Brussel
+          </div>
+        </div>
+      </mat-panel-title>
+      <span class="ep__toggle">
+        {{ panelOpenStateForClientTeam() ? 'HIDE' : 'SHOW' }} PERMISSIONS & ACCESS
+      </span>
     </mat-expansion-panel-header>
 
-    asdhvjabsdamsdkasdd....
+    <app-permissions-access-form></app-permissions-access-form>
 
   </mat-expansion-panel>
 </mat-accordion>

@@ -1,0 +1,55 @@
+.perm-form {
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  &__devider {
+    border-top: 1px solid var(--grey-border-50);
+  }
+
+  &__title {
+    font-size: 14px;
+    color: var(--text-dark-blue);
+    margin-top: 30px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.inner-section {
+  display: flex;
+  max-width: 684px;
+  margin: 0 auto;
+  gap: 10px;
+
+  &__title {
+    font-size: 12px;
+    color: var(--grey-200);
+    width: 50%;
+  }
+
+  &__name {
+    width: 50%;
+    display: flex;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  &__checkboxes {
+    margin-left: -16px;
+  }
+
+  &__devider {
+    margin-top: 10px;
+  }
+}
+
+
+.checkbox__title {
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+}
+
