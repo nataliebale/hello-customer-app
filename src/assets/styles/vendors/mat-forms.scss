@@ -10,4 +10,55 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+  .mdc-line-ripple::before {
+    border-bottom-width: 2px;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: var(--grey-200);
+  }
+
+  // Mat-radio
+  .mat-mdc-radio-touch-target,
+  .mat-mdc-radio-button .mdc-radio__native-control,
+  .mat-mdc-radio-button .mdc-radio__background,
+  .mat-mdc-radio-button .mdc-radio{
+    display: none;
+  }
+
+  .mat-mdc-radio-checked .radio{
+    position: relative;
+
+    &::after{
+      content: "";
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      position: absolute;
+      border: 2px solid var(--blue);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &::before{
+      content: "";
+      background: url("../../icons/check.svg") no-repeat 19px 8px;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      background-color: var(--blue);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      top: 0;
+      right: -1px;
+    }
+  }
+
+  .mat-internal-form-field>label{
+    padding-left: 0;
+  }
 }
+
+
+
+

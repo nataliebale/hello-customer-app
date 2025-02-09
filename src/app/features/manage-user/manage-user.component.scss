@@ -25,6 +25,10 @@
 }
 
 .section{
+  &:not(:last-child){
+    border-bottom: 1px solid var(--grey-border-50);
+  }
+
   &__title{
     font-size: 14px;
     font-weight: bold;

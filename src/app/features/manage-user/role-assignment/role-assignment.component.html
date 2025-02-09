@@ -1,1 +1,25 @@
-<p>role-assignment works!</p>
+<mat-radio-group formControlName="roleAssignment" class="form__field form__radio">
+  <mat-radio-button value="admin" class="form__radio__item" checked>
+    <div class="radio">
+      <p class="radio__title">Admin</p>
+      <p class="radio__description">Can edit and view everything in the application</p>
+    </div>
+  </mat-radio-button>
+  <mat-radio-button value="manager" class="form__radio__item">
+    <div class="radio">
+      <p class="radio__title">Manager</p>
+      <p class="radio__description">Can view TPs, analysis, reports, dashboards, conversations</p>
+    </div>
+  </mat-radio-button>
+  <mat-radio-button value="employee" class="form__radio__item">
+    <div class="radio">
+      <p class="radio__title">Employee</p>
+      <p class="radio__description">Has access only to personally assigned data</p>
+    </div>
+  </mat-radio-button>
+</mat-radio-group>
+
+<div class="role-assignment__footer">
+  Don’t understand how the roles work?
+  <a href="#" class="role-assignment__footer__link">Learn more about it</a>
+</div>

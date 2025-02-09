@@ -7,4 +7,8 @@
   &__field{
     width: 50%;
   }
+
+  &__field--error{
+    color: var(--error-red)
+  }
 }
