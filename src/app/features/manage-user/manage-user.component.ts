@@ -22,7 +22,7 @@ export class ManageUserComponent {
 
   onCancel() {
     this.personalInfoComp.clearForm();
-    this.roleAssignmentComp.roleAssignment.reset();
+    this.roleAssignmentComp.clearRole();
     this.permissionsComp.resetAllForms();
   }
 

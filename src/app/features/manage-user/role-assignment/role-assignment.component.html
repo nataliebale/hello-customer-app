@@ -1,4 +1,4 @@
-<mat-radio-group formControlName="roleAssignment" class="form__field form__radio">
+<mat-radio-group [formControl]="roleAssignment" class="form__field form__radio">
   <mat-radio-button
     value="admin"
     class="form__radio__item"
@@ -10,6 +10,7 @@
       <p class="radio__description">Can edit and view everything in the application</p>
     </div>
   </mat-radio-button>
+
   <mat-radio-button
     value="manager"
     class="form__radio__item"
