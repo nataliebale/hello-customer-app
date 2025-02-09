@@ -1,0 +1,10 @@
+.form{
+  &__row{
+    display: flex;
+    gap: 20px;
+  }
+
+  &__field{
+    width: 50%;
+  }
+}

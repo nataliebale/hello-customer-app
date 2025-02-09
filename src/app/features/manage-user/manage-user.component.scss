@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--grey-50);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+  }
+
+  &__title{
+    color: var(--text-dark-blue);
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.main{
+  margin-top: 12px;
+}
+
+.section{
+  &__title{
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 32px;
+    margin-bottom: 16px;
+    color: var(--text-dark-blue);
+    text-transform: uppercase;
+  }
+}

@@ -1,22 +1,40 @@
 <header class="header">
-  <div class="container">
+  <div class="container header__content">
     <p class="header__title">
       Add new user
     </p>
     <div class="header__buttons">
-      <button class="header__button">cancel</button>
-      <button class="header__button">save user</button>
+      <button class="btn btn--transparent">Cancel</button>
+      <button class="btn btn--green">Save user</button>
     </div>
   </div>
 </header>
-<main>
-  <section class="container-small">
-    <app-personal-information></app-personal-information>
+
+<main class="main">
+  <section class="section">
+    <div class="container-small">
+      <p class="section__title">
+        Personal information
+      </p>
+      <app-personal-information></app-personal-information>
+    </div>
   </section>
-  <section class="container-small">
-    <app-role-assignment></app-role-assignment>
+
+  <section class="section">
+    <div class="container-small">
+      <p class="section__title">
+        Assign a role
+      </p>
+      <app-role-assignment></app-role-assignment>
+    </div>
   </section>
-  <section class="container-small">
-    <app-permissions></app-permissions>
+
+  <section class="section">
+    <div class="container-small">
+      <p class="section__title">
+        Custom access permissions
+      </p>
+      <app-permissions></app-permissions>
+    </div>
   </section>
 </main>

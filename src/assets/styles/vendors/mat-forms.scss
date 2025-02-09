@@ -1,0 +1,13 @@
+.form__field {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: var(--grey-100);
+  }
+
+  .mdc-text-field--filled {
+    height: 52px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}

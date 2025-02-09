@@ -1,12 +1,23 @@
-@import "assets/scss/variables";
-@import "assets/scss/normalize";
+// Base styles
+@import "assets/styles/base/variables";
+@import "assets/styles/base/normalize";
+
+// Components styles
+@import "assets/styles/components/buttons";
+
+// Vendors styles
+@import "assets/styles/vendors/mat-forms";
 
 .container{
-  width: 1200px;
+  max-width: 1250px;
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
 .container-small{
-  width: 800px;
+  max-width: 850px;
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
