@@ -20,7 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
   styleUrl: './personal-information.component.scss'
 })
 export class PersonalInformationComponent {
-  personalInfoForm: FormGroup<PersonalInfoFormControls> = this.createForm();
+  form: FormGroup<PersonalInfoFormControls> = this.createForm();
 
   private createForm(): FormGroup<PersonalInfoFormControls>{
     return new FormGroup({
@@ -34,5 +34,9 @@ export class PersonalInformationComponent {
         validators: [emailsMatchValidator]
       }
     );
+  }
+
+  clearForm(){
+    this.form.reset();
   }
 }

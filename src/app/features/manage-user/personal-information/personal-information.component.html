@@ -1,4 +1,4 @@
-<form [formGroup]="personalInfoForm" class="personal-information__form">
+<form [formGroup]="form" class="personal-information__form">
   <div class="form__row">
     <mat-form-field class="form__field">
       <mat-label>First name (optional)</mat-label>
@@ -14,7 +14,7 @@
     <mat-form-field class="form__field">
       <mat-label>
         Email address
-        @if (personalInfoForm?.errors?.['emailMismatch']) {
+        @if (form?.errors?.['emailMismatch']) {
           <span class="form__field--error">
             (Emails do not match)
           </span>
@@ -22,12 +22,12 @@
       </mat-label>
       <input matInput type="text" formControlName="emailAddress">
 
-      @if (personalInfoForm.controls.emailAddress?.hasError('required')) {
+      @if (form.controls.emailAddress?.hasError('required')) {
         <mat-error>
           Email is required
         </mat-error>
       }
-      @if (personalInfoForm.controls.emailAddress?.hasError('email')) {
+      @if (form.controls.emailAddress?.hasError('email')) {
         <mat-error>
           Must be a valid email
         </mat-error>
@@ -37,7 +37,7 @@
     <mat-form-field class="form__field">
       <mat-label>
         Confirm email address
-        @if (personalInfoForm?.errors?.['emailMismatch']) {
+        @if (form?.errors?.['emailMismatch']) {
           <span class="form__field--error">
             (Emails do not match)
           </span>
@@ -46,12 +46,12 @@
       <input matInput type="text" formControlName="confirmEmailAddress">
 
 
-      @if (personalInfoForm.controls.confirmEmailAddress?.hasError('required')) {
+      @if (form.controls.confirmEmailAddress?.hasError('required')) {
         <mat-error>
           Confirmation email is required
         </mat-error>
       }
-      @if (personalInfoForm.controls.confirmEmailAddress?.hasError('email')) {
+      @if (form.controls.confirmEmailAddress?.hasError('email')) {
         <mat-error>
           Must be a valid email
         </mat-error>

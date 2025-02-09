@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
 import {FormControl} from '@angular/forms';
+import {RolesEnum} from '../../../shared/enums/roles.enum';
 
 @Component({
   selector: 'app-role-assignment',
@@ -9,6 +10,11 @@ import {FormControl} from '@angular/forms';
   styleUrl: './role-assignment.component.scss'
 })
 export class RoleAssignmentComponent {
-  roleAssignment = new FormControl('');
+  readonly RolesEnum = RolesEnum;
 
+  roleAssignment = new FormControl(RolesEnum.EMPLOYEE);
+
+  clearRole() {
+    this.roleAssignment.reset();
+  }
 }
